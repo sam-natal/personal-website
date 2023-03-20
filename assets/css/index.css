@@ -1,0 +1,234 @@
+/* Roboto regular */
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("../font/baskerville/LibreBaskerville-Bold.ttf");
+}
+@font-face {
+  font-family: "Maven Pro";
+  src: url("../font/maven/static/MavenPro-Medium.ttf");
+}
+@font-face {
+  font-family: "Arizonia";
+  src: url("../font/Arizona/Arizonia-Regular.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0 6%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  padding: 0 !important;
+  background-color: #fff !important;
+  box-shadow: 0 1px 2px hsla(0,0%,0%,0.05), 0 1px 4px hsla(0, 0%, 0%, 0.05), 0 2px 8px hsla(0, 0%, 0%, 0.05);
+  z-index: 1;
+}
+.nav-item{
+  margin: 0 1%;
+}
+
+#logo {
+  float: left;
+  margin: 0;
+  height: 75px;
+}
+.nav-link {
+  color: #000 !important;
+}
+
+.nav-link:hover {
+  background-color: #f5f5f5;
+}
+
+.wrapper {
+  height: 400px;
+  margin: 0;
+}
+.hlw-cont {
+  position: absolute;
+  width: 40%;
+  margin-top: 2%;
+  padding: 1%;
+  display: inline-block;
+}
+
+.hlw-h {
+  margin: 3% 0;
+  font-size: 400%;
+  color: #5f9df7;
+  font-family: "Libre Baskerville", serif;
+}
+
+.intro-p {
+  line-height: 2em;
+  font-size: large;
+  font-family: "Maven Pro", serif;
+  color: #666e7a;
+}
+
+.triangle {
+  display: inline-block;
+  margin: 0;
+  width: 0;
+  height: 0;
+  float: right;
+  border-left: 200px solid transparent;
+  border-bottom: 600px solid #5f9df7;
+  border-right: 500px solid #5f9df7;
+}
+
+.triangle img {
+  position: relative;
+  top: 100px;
+  left: 50px;
+  border: 1px solid #fff;
+  border-radius: 30%;
+  width: 350px;
+  height: 350px;
+}
+
+main-footer {
+  height: 60px;
+  border-top: 1px solid #000;
+  margin-top: auto;
+  text-align: center;
+}
+
+.socio-icon-dv {
+  height: 40px;
+}
+
+.socio-icon {
+  width: 20px;
+  height: 20px;
+  margin: 1% 1%;
+}
+
+.copyright-p {
+  margin: 0;
+  color: #a0a0a1;
+  font-size: small;
+}
+
+/* ABOUT PAGE */
+.progress {
+  margin-top: 0.5%;
+  height: 15px !important;
+}
+@keyframes exp {
+  0% {
+    width: 0%
+  }
+  100% {
+    width: 25%
+  }
+}
+.progress-bar {
+  color: #000 !important;
+  visibility: hidden;
+  
+}
+.progress-bar.active {
+  visibility: visible;
+}
+.info-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info-div.active {
+  display: inline-block;
+}
+.info-div {
+  margin: 2%;
+  display: none;
+  width: 75%;
+  height: 515px;
+  border: 1px solid #5f9df7;
+}
+
+.info-h {
+  background-color: #5f9df7;
+  text-align: center;
+}
+.info-btn {
+  position: relative;
+  top: 1%;
+  width: 10%;
+}
+#prev {
+  visibility: hidden;
+}
+.p-info-label{
+  width:30%;
+  font-weight: bolder;
+  text-align: left;
+}
+.p-info-paragrap{
+  display: inline-block;
+  width:60%;
+  text-align: left;
+}
+.p-info-dv{
+  text-align: center;
+  width: 50%;
+  margin: 10% 0 0 33%;
+}
+.edu-info-dv{
+  width: 80%;
+  margin-top: 3%;
+  padding-left: 15%;
+}
+.skills-ul{
+  padding-top: 6%;
+}
+.skills-h{
+  background-color: #d7d7d7;
+  text-align: center;
+}
+.skills-li{
+  display:inline-block;
+  border:1px solid #000;
+  margin: 3%;
+  width: 250px;
+  height: 200px;
+}
+.skills-li.database{
+position: relative;
+top:-70px;
+}
+.exp-dv{
+  text-align: center;
+}
+.exp-ul{
+  padding-left: 0;
+}
+.exp-p{
+  width: 80%;
+  margin-left: 4.5%;
+  text-align: left;
+  font-weight: bold;
+}
+.exp-li{
+  display:inline-block;
+  border: 1px solid #000;
+  width: 45%;
+  padding: 1%;
+  text-align: left;
+}
+.exp-btn{
+  margin: 1% 1% 1% 0;
+}
+
+/* STYLES FOR THE PORTIFOLIO PAGE */
+.carousel-item{
+  text-align: center;
+}
+.portifolio-wallpaper{
+  width: 600px;
+  height: 500px;
+}
