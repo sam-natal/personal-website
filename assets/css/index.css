@@ -24,10 +24,11 @@ body {
 nav {
   padding: 0 !important;
   background-color: #fff !important;
-  box-shadow: 0 1px 2px hsla(0,0%,0%,0.05), 0 1px 4px hsla(0, 0%, 0%, 0.05), 0 2px 8px hsla(0, 0%, 0%, 0.05);
+  box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.05), 0 1px 4px hsla(0, 0%, 0%, 0.05),
+    0 2px 8px hsla(0, 0%, 0%, 0.05);
   z-index: 1;
 }
-.nav-item{
+.nav-item {
   margin: 0 1%;
 }
 
@@ -54,6 +55,13 @@ nav {
   margin-top: 2%;
   padding: 1%;
   display: inline-block;
+  text-align: center;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 
 .hlw-h {
@@ -61,13 +69,17 @@ nav {
   font-size: 400%;
   color: #5f9df7;
   font-family: "Libre Baskerville", serif;
+  font-style: italic;
 }
 
 .intro-p {
   line-height: 2em;
-  font-size: large;
+  font-size: x-large;
   font-family: "Maven Pro", serif;
   color: #666e7a;
+  font-style: italic;
+  text-align: left;
+  padding-left: 6%;
 }
 
 .triangle {
@@ -81,14 +93,14 @@ nav {
   border-right: 500px solid #5f9df7;
 }
 
-.triangle img {
-  position: relative;
-  top: 100px;
-  left: 50px;
-  border: 1px solid #fff;
-  border-radius: 30%;
-  width: 350px;
-  height: 350px;
+.core-values-dv {
+  width: 500px;
+  margin-top: 90px;
+}
+
+.core-values-dv li {
+  margin: 6% 0;
+  font-weight: bold;
 }
 
 main-footer {
@@ -121,21 +133,20 @@ main-footer {
 }
 @keyframes exp {
   0% {
-    width: 0%
+    width: 0%;
   }
   100% {
-    width: 25%
+    width: 25%;
   }
 }
 .progress-bar {
   color: #000 !important;
   visibility: hidden;
-  
 }
 .progress-bar.active {
   visibility: visible;
 }
-.info-wrapper{
+.info-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,72 +174,122 @@ main-footer {
 #prev {
   visibility: hidden;
 }
-.p-info-label{
-  width:30%;
+.p-info-label {
+  width: 30%;
   font-weight: bolder;
   text-align: left;
 }
-.p-info-paragrap{
+.p-info-paragrap {
   display: inline-block;
-  width:60%;
+  width: 60%;
   text-align: left;
 }
-.p-info-dv{
+.p-info-dv {
   text-align: center;
   width: 50%;
   margin: 10% 0 0 33%;
 }
-.edu-info-dv{
+.edu-info-dv {
   width: 80%;
   margin-top: 3%;
   padding-left: 15%;
 }
-.skills-ul{
-  padding-top: 6%;
+.skills-ul {
+  padding-top: 0%;
 }
-.skills-h{
+.skills-h {
   background-color: #d7d7d7;
   text-align: center;
 }
-.skills-li{
-  display:inline-block;
-  border:1px solid #000;
+.skills-li {
+  display: inline-block;
+  border: 1px solid #000;
   margin: 3%;
   width: 250px;
   height: 200px;
 }
-.skills-li.database{
-position: relative;
-top:-70px;
+.skills-li.database {
+  position: relative;
+  top: -70px;
 }
-.exp-dv{
+
+.skills-li.others {
+  position: relative;
+  top: -70px;
+  margin-top: 0px;
+}
+.exp-dv {
   text-align: center;
 }
-.exp-ul{
+.exp-ul {
   padding-left: 0;
 }
-.exp-p{
+.exp-p {
   width: 80%;
   margin-left: 4.5%;
   text-align: left;
   font-weight: bold;
 }
-.exp-li{
-  display:inline-block;
+.exp-li {
+  display: inline-block;
   border: 1px solid #000;
   width: 45%;
   padding: 1%;
   text-align: left;
 }
-.exp-btn{
+.exp-btn {
   margin: 1% 1% 1% 0;
 }
 
 /* STYLES FOR THE PORTIFOLIO PAGE */
-.carousel-item{
+.carousel-item {
   text-align: center;
 }
-.portifolio-wallpaper{
+.portifolio-wallpaper {
   width: 600px;
   height: 500px;
+}
+
+/* STYLES FOR THE CONTACT PAGE */
+.contact-dv {
+  padding: 3% 3%;
+}
+.contact-h {
+  text-align: center;
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .contact-dv {
+    padding: 3% 10%;
+  }
+}
+
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .contact-dv {
+    padding: 3% 20%;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .contact-dv {
+    padding: 3% 25%;
+  }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .contact-dv {
+    padding: 3% 30%;
+  }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .contact-dv {
+    padding: 3% 30%;
+  }
 }

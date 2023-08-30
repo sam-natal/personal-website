@@ -44,7 +44,7 @@ class Header extends HTMLElement {
   }
 }
 
-const year = "2023";
+const year = new Date().getFullYear();
 class Footer extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `     
@@ -56,7 +56,7 @@ class Footer extends HTMLElement {
       <img class="socio-icon" src="/assets/icon/icons8-instagram.svg" alt="Instagram">
       <img class="socio-icon" src="/assets/icon/icons8-linkedin.svg" alt="Linkedin">
     </div>
-    <p class="copyright-p">&copy;&nbsp;2023&nbsp;&nbsp;&nbsp;www.natalsamuel.com</p>
+    <p class="copyright-p">&copy;&nbsp;`+year+`&nbsp;&nbsp;&nbsp;www.natalsamuel.com</p>
   </footer> 
   </body>
   </html>   

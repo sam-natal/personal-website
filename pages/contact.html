@@ -2,7 +2,57 @@
 
 <main-header></main-header>
 
-<p class="hlw-p">Contact here..</p>
+<div class="contact-dv">
+  <h3 class="contact-h mb-5">Contact Me</h3>
+  <form action="/contact" method="POST">
+    <div class="input-group flex-nowrap mb-3">
+      <span class="input-group-text" id="addon-wrapping">Name</span>
+      <input
+        type="text"
+        name="name"
+        class="form-control"
+        aria-label="Username"
+        aria-describedby="addon-wrapping"
+      />
+    </div>
+
+    <div class="input-group flex-nowrap mb-3">
+      <span class="input-group-text" id="addon-wrapping">@</span>
+      <input
+        type="text"
+        name="email"
+        class="form-control"
+        aria-label="Username"
+        aria-describedby="addon-wrapping"
+      />
+    </div>
+
+    <div class="input-group flex-nowrap mb-3">
+      <span class="input-group-text" id="addon-wrapping">Subject</span>
+      <input
+        type="text"
+        name="subject"
+        class="form-control"
+        aria-label="Username"
+        aria-describedby="addon-wrapping"
+      />
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text">Message</span>
+      <textarea
+        class="form-control"
+        name="message"
+        aria-label="With textarea"
+        rows="4"
+      ></textarea>
+    </div>
+
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-3 w-25">Send</button>
+    </div>
+  </form>
+</div>
 
 <main-footer></main-footer>
-<script src="js/bootstrap.bundle.min.js"></script> 
+<script src="js/bootstrap.bundle.min.js"></script>
