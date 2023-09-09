@@ -1,5 +1,64 @@
 <script src="/assets/js/components.js"></script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    const sendButton = document.getElementById("send-button");
+    const statusMessage = document.getElementById("status-message");
+
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      // Disable the button while processing
+      sendButton.disabled = true;
+
+      // Create a loader container
+      const loaderContainer = document.createElement("div");
+      loaderContainer.className = "loader-container";
+
+      // Create the loader
+      const loader = document.createElement("div");
+      loader.className = "loader";
+
+      // Append the loader to the container
+      loaderContainer.appendChild(loader);
+
+      // Replace the button content with the loader
+      sendButton.innerHTML = "";
+      sendButton.appendChild(loaderContainer);
+
+      // Serialize the form data as a JavaScript object
+      const formData = Object.fromEntries(new FormData(form));
+
+      // Convert the JavaScript object to a JSON string
+      const jsonData = JSON.stringify(formData);
+
+      const response = await fetch("/contact", {
+        method: "POST",
+        body: jsonData,
+        headers: {
+          "Content-Type": "application/json", // Set the content type to JSON
+        },
+      });
+
+      console.log(formData);
+
+      if (response.ok) {
+        sendButton.textContent = "Sent";
+        statusMessage.textContent = "Email sent successfully!";
+        statusMessage.style.color = "green";
+        statusMessage.style.display = "block";
+        form.reset();
+      } else {
+        sendButton.textContent = "Send";
+        statusMessage.textContent = "Error sending email. Please try again.";
+        statusMessage.style.color = "red";
+        statusMessage.style.display = "block";
+      }
+    });
+  });
+</script>
+
 <main-header></main-header>
 
 <div class="contact-dv">
@@ -13,6 +72,7 @@
         class="form-control"
         aria-label="Username"
         aria-describedby="addon-wrapping"
+        required
       />
     </div>
 
@@ -24,6 +84,7 @@
         class="form-control"
         aria-label="Username"
         aria-describedby="addon-wrapping"
+        required
       />
     </div>
 
@@ -35,6 +96,7 @@
         class="form-control"
         aria-label="Username"
         aria-describedby="addon-wrapping"
+        required
       />
     </div>
 
@@ -45,12 +107,17 @@
         name="message"
         aria-label="With textarea"
         rows="4"
+        required
       ></textarea>
     </div>
 
     <div class="col-auto">
-      <button type="submit" class="btn btn-primary mb-3 w-25">Send</button>
+      <button id="send-button" type="submit" class="btn btn-primary mb-3 w-25">
+        Send
+      </button>
     </div>
+
+    <div id="status-message" style="display: none"></div>
   </form>
 </div>
 

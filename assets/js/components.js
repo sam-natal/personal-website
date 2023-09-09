@@ -5,6 +5,12 @@ class Header extends HTMLElement {
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Samuel Natal's personal portifolio website." />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favcons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favcons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favcons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favcons/site.webmanifest">
     <title>Samuel Natal</title>
     <link rel="stylesheet" href="/assets/css/index.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" /> 
@@ -12,7 +18,7 @@ class Header extends HTMLElement {
   <body>
     <nav class="navbar navbar-expand-lg removed-bg-body-tertiary removed-fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/"><img id="logo" src="assets/img/original.PNG" alt="logo" /></a>
+    <a class="navbar-brand" href="/"><img id="logo" src="/assets/img/original.PNG" alt="logo" /></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -47,7 +53,8 @@ class Header extends HTMLElement {
 const year = new Date().getFullYear();
 class Footer extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = `     
+    this.innerHTML =
+      `     
     <footer>
     <div class="socio-icon-dv">
       <img class="socio-icon" src="/assets/icon/icons8-github.svg" alt="Github">
@@ -56,7 +63,9 @@ class Footer extends HTMLElement {
       <img class="socio-icon" src="/assets/icon/icons8-instagram.svg" alt="Instagram">
       <img class="socio-icon" src="/assets/icon/icons8-linkedin.svg" alt="Linkedin">
     </div>
-    <p class="copyright-p">&copy;&nbsp;`+year+`&nbsp;&nbsp;&nbsp;www.natalsamuel.com</p>
+    <p class="copyright-p">&copy;&nbsp;` +
+      year +
+      `&nbsp;&nbsp;&nbsp;www.natalsamuel.com</p>
   </footer> 
   </body>
   </html>   
@@ -79,14 +88,14 @@ nextBtn.addEventListener("click", () => {
   progArray[infoBtnCounter].style.visibility = "visible";
   progArray[infoBtnCounter].style.animation = "3s ease-out 0s 1 exp";
   if (infoBtnCounter <= 3) {
-    prevBtn.style.visibility = "visible";
+    prevBtn.style.display = "inline-block";
     for (i = 0; i < 4; i++) {
       if (i == infoBtnCounter) infoArray[i].style.display = "inline-block";
       else infoArray[i].style.display = "none";
     }
   }
   if (infoBtnCounter == 3) {
-    nextBtn.style.visibility = "hidden";
+    nextBtn.style.display = "none";
   }
 });
 
@@ -95,15 +104,15 @@ prevBtn.addEventListener("click", () => {
   progArray[infoBtnCounter].style.visibility = "hidden";
   infoBtnCounter--;
   if (infoBtnCounter <= 3) {
-    nextBtn.style.visibility = "visible";
+    nextBtn.style.display = "inline-block";
     for (i = 0; i < 4; i++) {
       if (i == infoBtnCounter) infoArray[i].style.display = "inline-block";
       else infoArray[i].style.display = "none";
     }
   }
   if (infoBtnCounter == 0) {
-    prevBtn.style.visibility = "hidden";
-    nextBtn.style.visibility = "visible";
+    prevBtn.style.display = "none";
+    nextBtn.style.display = "inline-block";
   }
 });
 

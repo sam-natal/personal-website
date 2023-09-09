@@ -14,19 +14,18 @@
 </div>
 
 <div class="info-wrapper">
-  <button id="prev" class="btn btn-outline-primary btn-md info-btn">
-    Previous
-  </button>
   <div class="info-div active">
     <h3 class="info-h">Personal information</h3>
     <div class="p-info-dv">
-      <label class="p-info-label">Name:</label>
-      <p class="p-info-paragrap">Samwel Natal Njiku</p>
-      <label class="p-info-label">Age</label>
-      <p class="p-info-paragrap">26 yrs<script>echo(new Date().getFullYear())</script></p>
+      <label class="p-info-label">Name</label>
+      <p class="p-info-paragrap">Samwel Natal</p>
+      <label class="p-info-label">Email</label>
+      <p class="p-info-paragrap">natalsamuel23@gmail.com</p>
+      <label class="p-info-label">Phone</label>
+      <p class="p-info-paragrap">+255 767 952016</p>
       <label class="p-info-label">Nationality</label>
       <p class="p-info-paragrap">Tanzanian</p>
-      <label class="p-info-label">Profession</label>
+      <label class="p-info-label">Career</label>
       <p class="p-info-paragrap">Software developer</p>
       <label class="p-info-label">Hobby</label>
       <p class="p-info-paragrap">Reading books</p>
@@ -37,34 +36,15 @@
   <div class="info-div">
     <h3 class="info-h">Education background</h3>
     <div class="edu-info-dv">
-      <ul>
+      <ul class="education-ul">
         <li>
-          <h5>Primary school</h5>
+          <h5>Bachelor of Science in Information Technology (IT)</h5>
           <p>
-            2003 - 2010 .At St. William Junioe Seminary, Diagwa, Singida.<br />Acquired
-            Certificate of Primary Education Examination ( CPEE )
-          </p>
-        </li>
-        <li>
-          <h5>Secondary school</h5>
-          <p>
-            2011 - 2014 .At St. Patrick Seminary, Dung'unyi, Singida<br />Acquired
-            certificate of Secondary Examination ( CSEE )
-          </p>
-        </li>
-        <li>
-          <h5>Advanced secondary school</h5>
-          <p>
-            2015 - 2017 .At Pugu secondary school, Pugu, Dar es Salaam<br />
-            Acquired advanced Certificate of Secondary Education Examination (
-            ACSEE )
+            2020 - 2023 .At Institute of Finance Management (IFM), Posta, Dar es
+            Salaam<br />
           </p>
         </li>
       </ul>
-      <p>
-        <label style="font-weight: bolder">NOTE:</label> Currently am taking
-        Bachelor of Science in Information Technology at IFM, Dar es Salaam.
-      </p>
     </div>
   </div>
   <div class="info-div">
@@ -83,7 +63,7 @@
       </li>
       <li class="skills-li">
         <h5 class="skills-h">Frameworks</h5>
-        <ul disc>
+        <ul>
           <li>React.js</li>
           <li>Laravel</li>
           <li>Express.js</li>
@@ -92,11 +72,11 @@
           <li>JQuery</li>
         </ul>
       </li>
-      <li class="skills-li database">
+      <li class="skills-li db-li">
         <h5 class="skills-h">Database</h5>
         <ul>
           <li>MySQL</li>
-          <li>Oracle</li>
+          <li>PostgreSQL</li>
           <li>MongoDB</li>
         </ul>
       </li>
@@ -115,65 +95,16 @@
     <h3 class="info-h">Experience</h3>
     <div class="exp-dv">
       <p class="exp-p">
-        As part of my learning process, i created several projects to test my
-        skills and kwowledge i acquired as listed below:
+        During my learning journey, i created several projects to sharpen my
+        knowledge, skills and gain more experience. I was able to apply various
+        tools and technologies such as different programming languages,
+        frameworks and database technologies to build web and mobile
+        applications.You can visit my portifolio page and view my projects in
+        more details.
       </p>
-      <ul class="exp-ul">
-        <li class="exp-li">
-          <h5 class="exp-h">1. Forum web application</h5>
-          <ul>
-            <li>
-              Core features are registration and authentication system,post CRUD
-              operations ,comments, likes, and followings among members.
-            </li>
-            <li>
-              Technologies used were PHP, Javascript, Bootstrap, and MySQL
-            </li>
-          </ul>
-        </li>
-
-        <li class="exp-li">
-          <h5 class="exp-h">2. Full E-commerce web application</h5>
-          <ul disc>
-            <li>
-              Core features of the app are shopping cart, wish list,order,
-              search and filter products, integration with paypal and admin
-              panel.
-            </li>
-            <li>
-              Technologies used were react.js, laravel, MySQL, bootstrap and
-              javascript.
-            </li>
-          </ul>
-        </li>
-
-        <li class="exp-li">
-          <h5 class="exp-h">3. Movie theatre web application</h5>
-          <ul>
-            <li>
-              Core features are view, search, and filter movies , order seats,
-              make payments and admin panel.
-            </li>
-            <li>
-              Technologies used were Laravel, Javascript, Bootstrap, AJAX,
-              MySQL, and Paypal intergration
-            </li>
-          </ul>
-        </li>
-        <li class="exp-li">
-          <h5 class="exp-h">4. Financial android mobile application</h5>
-          <ul>
-            <li>
-              Core features includes integreted GPS,microphone, camera, and
-              money wallet which support different kind of transactions.
-            </li>
-            <li>Technologies used are kotlin and SQLite</li>
-          </ul>
-        </li>
-      </ul>
       <a href="/work"
         ><button class="btn btn-outline-info exp-btn">
-          Explore my project's live demo
+          Visit portifolio page to explore my projects
         </button></a
       >
       <a href="/assets/file/RESUME.docx" download="sam_resume"
@@ -181,9 +112,10 @@
       >
     </div>
   </div>
-  <button id="next" class="btn btn-outline-primary btn-md info-btn">
-    Next
-  </button>
+</div>
+<div class="abt-nav-btns">
+  <img id="prev" src="/assets/img/prev.png" class="" alt="..." />
+  <img id="next" src="/assets/img/next.png" class="" alt="..." />
 </div>
 <main-footer></main-footer>
 <script src="/assets/js/components.js"></script>

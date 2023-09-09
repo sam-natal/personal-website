@@ -1,12 +1,14 @@
 const express = require("express");
 const parser = require("body-parser");
 const app = express();
-app.use(parser.urlencoded({ extend: true }));
+
+app.use(parser.urlencoded({ extended: true }));
+app.use(express.json()); // Parse JSON request bodies
 app.use("/assets", express.static(__dirname + "/assets"));
 app.use(express.static(__dirname + "/node_modules/bootstrap/dist"));
 
 const nodemailer = require("nodemailer");
-const { body, validationResult } = require("express-validator");
+const { validationResult } = require("express-validator");
 require("dotenv").config();
 
 const transporter = nodemailer.createTransport({
@@ -35,12 +37,6 @@ app.get("/contact", function (req, res) {
 
 app.post(
   "/contact",
-  [
-    body("name").trim().notEmpty().escape(),
-    body("email").isEmail().normalizeEmail(),
-    body("subject").trim().notEmpty().escape(),
-    body("message").trim().notEmpty().escape(),
-  ],
   function (req, res) {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -58,11 +54,8 @@ app.post(
 
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
-        console.error(error);
-        console.log(error);
         res.status(500).send("Error sending email");
       } else {
-        console.log("Email sent: " + info.response);
         res.send("Email sent successfully");
       }
     });
@@ -71,6 +64,18 @@ app.post(
 
 app.get("/about", function (req, res) {
   res.sendFile(__dirname + "/pages/about.html");
+});
+
+app.get("/creative_art_box", function (req, res) {
+  res.sendFile(__dirname + "/pages/projects/creative_art_box.html");
+});
+
+app.get("/movie_point", function (req, res) {
+  res.sendFile(__dirname + "/pages/projects/movie_point.html");
+});
+
+app.get("/vicoba_app", function (req, res) {
+  res.sendFile(__dirname + "/pages/projects/vicoba_app.html");
 });
 
 app.listen(9000, function () {
