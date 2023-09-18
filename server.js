@@ -67,7 +67,7 @@ app.get("/about", function (req, res) {
 });
 
 app.get("/creative_art_box", function (req, res) {
-  res.sendFile(__dirname + "/pages/projects/creative_art_box.html");
+  res.sendFile(__dirname + "/pages/projects/artisan_gallery_hub.html");
 });
 
 app.get("/movie_point", function (req, res) {

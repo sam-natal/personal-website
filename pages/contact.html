@@ -59,67 +59,157 @@
   });
 </script>
 
-<main-header></main-header>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="I'm Samuel Natal, an experienced software developer from Tanzania. My expertise lies in crafting robust Android and web applications that meet specific program specifications and goals."
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favcons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favcons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favcons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/favcons/site.webmanifest" />
+    <title>Samuel Natal</title>
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg removed-bg-body-tertiary fixed-top m-auto"
+      style="width: 88%"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"
+          ><img id="logo" src="/assets/img/logo/logi-lg.PNG" alt="logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              <img id="logo" src="/assets/img/logo/logi-lg.PNG" alt="logo" />
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/work">Portifolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-<div class="contact-dv">
-  <h3 class="contact-h mb-5">Contact Me</h3>
-  <form action="/contact" method="POST">
-    <div class="input-group flex-nowrap mb-3">
-      <span class="input-group-text" id="addon-wrapping">Name</span>
-      <input
-        type="text"
-        name="name"
-        class="form-control"
-        aria-label="Username"
-        aria-describedby="addon-wrapping"
-        required
-      />
+    <div class="contact-dv">
+      <h3 class="contact-h mb-5">Contact Me</h3>
+      <form action="/contact" method="POST">
+        <div class="input-group flex-nowrap mb-3">
+          <span class="input-group-text" id="addon-wrapping">Name</span>
+          <input
+            type="text"
+            name="name"
+            class="form-control"
+            aria-label="Username"
+            aria-describedby="addon-wrapping"
+            required
+          />
+        </div>
+
+        <div class="input-group flex-nowrap mb-3">
+          <span class="input-group-text" id="addon-wrapping">@</span>
+          <input
+            type="text"
+            name="email"
+            class="form-control"
+            aria-label="Username"
+            aria-describedby="addon-wrapping"
+            required
+          />
+        </div>
+
+        <div class="input-group flex-nowrap mb-3">
+          <span class="input-group-text" id="addon-wrapping">Subject</span>
+          <input
+            type="text"
+            name="subject"
+            class="form-control"
+            aria-label="Username"
+            aria-describedby="addon-wrapping"
+            required
+          />
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text">Message</span>
+          <textarea
+            class="form-control"
+            name="message"
+            aria-label="With textarea"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <div class="col-auto">
+          <button
+            id="send-button"
+            type="submit"
+            class="btn btn-primary mb-3 w-25"
+          >
+            Send
+          </button>
+        </div>
+
+        <div id="status-message" style="display: none"></div>
+      </form>
     </div>
 
-    <div class="input-group flex-nowrap mb-3">
-      <span class="input-group-text" id="addon-wrapping">@</span>
-      <input
-        type="text"
-        name="email"
-        class="form-control"
-        aria-label="Username"
-        aria-describedby="addon-wrapping"
-        required
-      />
-    </div>
-
-    <div class="input-group flex-nowrap mb-3">
-      <span class="input-group-text" id="addon-wrapping">Subject</span>
-      <input
-        type="text"
-        name="subject"
-        class="form-control"
-        aria-label="Username"
-        aria-describedby="addon-wrapping"
-        required
-      />
-    </div>
-
-    <div class="input-group mb-3">
-      <span class="input-group-text">Message</span>
-      <textarea
-        class="form-control"
-        name="message"
-        aria-label="With textarea"
-        rows="4"
-        required
-      ></textarea>
-    </div>
-
-    <div class="col-auto">
-      <button id="send-button" type="submit" class="btn btn-primary mb-3 w-25">
-        Send
-      </button>
-    </div>
-
-    <div id="status-message" style="display: none"></div>
-  </form>
-</div>
-
-<main-footer></main-footer>
-<script src="js/bootstrap.bundle.min.js"></script>
+    <main-footer></main-footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

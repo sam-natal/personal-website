@@ -43,7 +43,8 @@ nav {
 #logo {
   float: left;
   margin: 0;
-  height: 75px;
+  height: 40px;
+  width: 80%;
 }
 .nav-link {
   color: #000 !important;
@@ -56,6 +57,7 @@ nav {
 .wrapper {
   height: auto;
   margin: 0;
+  padding-top: 4em;
 }
 .hlw-cont {
   width: 50%;
@@ -153,6 +155,10 @@ main-footer {
   width: 20px;
   height: 20px;
   margin: 1% 1%;
+}
+
+.socio-icon-a {
+  text-decoration: none;
 }
 
 .copyright-p {
@@ -506,6 +512,7 @@ main-footer {
 /* STYLES FOR THE CONTACT PAGE */
 .contact-dv {
   padding: 3% 3%;
+  margin-top: 4em;
 }
 .contact-h {
   text-align: center;
@@ -575,7 +582,7 @@ main-footer {
 
 /* STYLES FOR THE PROJECT PAGE */
 .project-container {
-  margin-top: 2%;
+  margin-top: 4em;
   padding: 0 9%;
 }
 .project-dv {
